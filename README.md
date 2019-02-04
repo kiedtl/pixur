@@ -15,12 +15,12 @@ Because Pixur uses ANSI escape codes, not every terminal fully supports Pixur (y
 
 |Terminal|Full Support?|
 |--------|---------|
-|Windows Console|✔|
-|Alacritty|❌|
-|Cmder|❌|
-|ConEmu|❌|
-|Hyper|❌|
-|Terminus|❌|
+|Windows Console|  ✔ Yes! |
+|Alacritty|  ❌ no |
+|Cmder|  ❌ no |
+|ConEmu|  ❌ no |
+|Hyper|  ❌ no |
+|Terminus|  ❌ no |
 
 ### Windows Console
 As of 2018, the glorious Windows Console seems to support full RGB color:
