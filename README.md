@@ -4,14 +4,21 @@
 The right way to print pictures in the terminal with PowerShell
 
 ## Usage
-Clone the repository into your project directory, then call the `bin/pixure.ps1` file:
+Clone the repository into your project directory, then call the `src/pixure.ps1` file:
 ```powershell
-$pixur = "$psscriptroot\..\lib\pixur\bin\pixur.ps1"
-"path/to/picture.png" | & $pixur -r 4 -c 2
+$ "path/to/picture.png" | pixur
 ```
 
-For more usage information, try running `pixur -h`.
+You can redirect output to a file:
 
+```powershell
+$ "path/to/picture.png" | pixur > image.pxl
+```
+... and view the saved image with `cat`:
+
+```powershell
+$ cat image.pxl
+```
 ## Terminal support
 Because Pixur uses ANSI escape codes, not every terminal fully supports Pixur (yet). Indeed, as of September 2018, only the famous Windows Console, once notorious for poor color and Unicode character support fully supports Pixur.
 
