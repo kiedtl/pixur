@@ -67,9 +67,9 @@ foreach ($item in $path) {
 		$b = $rgba[2]
 #write "red: $r green: $g blue: $b" 
 		if (($row % 2) -eq 0) {
-			$upper += "${r};${b};${g}"
+			$upper += "${r};${g};${b}"
 		} else {
-			$lower += "${r};${b};${g}"
+			$lower += "${r};${g};${b}"
 		}
 
 		if (($row%2) -eq 1 -and ($col -eq ($COLUMNS-1))) {
