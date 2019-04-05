@@ -46,6 +46,7 @@ if ($help) {
 $E = [char]0x1B
 $COLUMNS = $host.UI.RawUI.WindowSize.Width
 $CURR_ROW = ""
+$OUTPUT = ""
 $CHAR = [text.encoding]::utf8.getstring((226,150,128)) # 226,150,136
 [string[]]$global:upper = @()
 [string[]]$global:lower = @()
@@ -77,17 +78,13 @@ foreach ($item in $path) {
 				$CURR_ROW += "${E}[38;2;$($upper[$i]);48;2;$($lower[$i])m${CHAR}"
 				$i++
 			}
-			write "${CURR_ROW}${E}[0m${E}[K"
+			$OUTPUT += "${CURR_ROW}${E}[0m${E}[B${E}[0G`n"
 			$CURR_ROW = ""
 			$upper = @()
 			$lower = @()
 		}
 	}
+
+	write $OUTPUT
+	$OUTPUT = ""
 }
-
-
-
-
-
-
-	
