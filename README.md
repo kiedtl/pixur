@@ -4,6 +4,8 @@
 The right way to print pictures in the terminal with PowerShell
 
 ## Usage
+**NOTE**: Make sure you have ImageMagick installed.
+
 Clone the repository into your project directory, then call the `src/pixure.ps1` file:
 ```powershell
 $ "path/to/picture.png" | pixur
